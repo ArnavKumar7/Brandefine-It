@@ -76,7 +76,7 @@ export default function () {
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!
           </h1>
-          <h3 className="text-sm text-center mb-[2rem] xs:ml=[1rem] xs:mr-[1rem]">
+          <h3 className="text-2xl text-center mb-[2rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm">
             Ensure their details are filled as the first member of the team.
           </h3>
           <input
