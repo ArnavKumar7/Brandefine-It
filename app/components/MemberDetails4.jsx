@@ -97,7 +97,7 @@ export function MemberDetails4({ data, nextStep, handleChange, prevStep }) {
             />
           </div>
           <div className="grid gap-y-7 auto-rows-min">
-            <h1 className="mt-[5rem]">COLLEGE DETAILS</h1>
+            <h1 className="xs:mt-[5rem]">COLLEGE DETAILS</h1>
             <label
               htmlFor="college"
               className="text-xl font-semibold text-[#00B182]"

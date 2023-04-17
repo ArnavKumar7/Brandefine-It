@@ -3,6 +3,7 @@ import styles from "~/styles/register.css";
 import { Form } from "@remix-run/react";
 import { getStoredUsers, storeUsers } from "../api/users";
 import { redirect } from "@remix-run/node";
+import axios from "axios";
 
 export default function () {
   return (
@@ -83,19 +84,16 @@ export default function () {
 export async function action({ request }) {
   const transactionData = await request.formData();
   const transactionObject = Object.fromEntries(transactionData.entries());
-  const users = await getStoredUsers();
+  var users = await axios.get(`${process.env.BACKEND_URI}/get`);
+  users = users.data;
   const user = users.find((user) => user.m1email === transactionObject.email);
-  console.log(user);
   if (user === undefined || user === null) {
     return redirect("/OOPS");
   }
-  users.map((user) => {
-    if (user.m1email === transactionObject.email) {
-      user.transactionId = transactionObject.transactionID;
-    }
-    return user;
-  });
-  await storeUsers(users);
+
+  user.transactionId = transactionObject.transactionID;
+
+  await axios.put(`${process.env.BACKEND_URI}/update`, user);
   return redirect("/confirmation");
 }
 

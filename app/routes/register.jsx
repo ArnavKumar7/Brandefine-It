@@ -9,8 +9,10 @@ import styles from "~/styles/register.css";
 import { redirect } from "@remix-run/node";
 import { getStoredUsers, storeUsers } from "../api/users";
 import { useLoaderData } from "@remix-run/react";
+import axios from "axios";
 
 export default function () {
+  const users = useLoaderData();
   const [data, setData] = useState({
     id: "",
     step: 1,
@@ -88,7 +90,7 @@ export default function () {
             data={data}
             nextStep={nextStep}
             handleChange={handleChange}
-            users={[]}
+            users={users}
           />
         </div>
       );
@@ -115,7 +117,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={[]}
+            users={users}
           />
         </div>
       );
@@ -142,7 +144,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={[]}
+            users={users}
           />
         </div>
       );
@@ -169,7 +171,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={[]}
+            users={users}
           />
         </div>
       );
@@ -190,11 +192,11 @@ export default function () {
 export async function action({ request }) {
   const data = await request.formData();
   const formData = Object.fromEntries(data.entries());
-  const existingNotes = await getStoredUsers();
   formData.id = new Date().toISOString();
-  const updatedNotes = existingNotes.concat(formData);
-  // await new Promise((resolve, reject) => setTimeout(() => resolve(), 2000));
-  await storeUsers(updatedNotes);
+  const response = await axios.post(
+    `${process.env.BACKEND_URI}/create`,
+    formData
+  );
   if (formData.m1college.toUpperCase().includes("PES")) {
     return redirect("/pesuportal");
   } else {
@@ -207,6 +209,6 @@ export function links() {
 }
 
 export async function loader() {
-  const users = await getStoredUsers();
-  return users;
+  var users = await axios.get(`${process.env.BACKEND_URI}/get`);
+  return users.data;
 }
