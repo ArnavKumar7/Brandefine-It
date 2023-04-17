@@ -7,8 +7,7 @@ import { MemberDetails3 } from "../components/MemberDetails3";
 import { MemberDetails4 } from "../components/MemberDetails4";
 import styles from "~/styles/register.css";
 import { redirect } from "@remix-run/node";
-import { getStoredUsers, storeUsers } from "../api/users";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import axios from "axios";
 
 export default function () {
@@ -76,9 +75,16 @@ export default function () {
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!
           </h1>
+
           <h3 className="text-2xl text-center mb-[2rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm">
             Ensure their details are filled as the first member of the team.
           </h3>
+          <h1 className=" mb-[1rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+            If you have already registered and not done payment, go to{" "}
+            <Link to="/payment" className="text-blue-700">
+              here
+            </Link>
+          </h1>
           <input
             type="text"
             placeholder={data.teamname ? data.teamname : "TEAM NAME"}
@@ -157,7 +163,8 @@ export default function () {
             all communication received regarding Brandefine it!
           </h1>
           <h3 className="text-2xl text-center mb-[2rem] xs:ml=[1rem] xs:mr-[1rem]">
-            Ensure their details are filled as the first member of the team.
+            Member-4 details are optional, if you don't have a Member-4, please
+            proceed to pay
           </h3>
           <input
             type="text"
