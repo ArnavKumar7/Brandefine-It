@@ -29,7 +29,10 @@ export default function App() {
 }
 
 export function links() {
-  return [{ rel: "stylesheet", href: stylesheet }];
+  return [
+    { rel: "stylesheet", href: stylesheet },
+    { rel: "icon", href: "/Brandefineit_favicon.png" },
+  ];
 }
 export const meta = () => {
   return [{ title: "BrandefineIt" }];
