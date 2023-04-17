@@ -1,7 +1,9 @@
 import fs from "fs/promises";
 
 export async function getStoredUsers() {
-  const rawFileCOntent = await fs.readFile("users.json", { encoding: "utf-8" });
+  const rawFileCOntent = await fs.readFile("./users.json", {
+    encoding: "utf-8",
+  });
   const data = JSON.parse(rawFileCOntent);
   const storedUsers = data.registrations ?? [];
   return storedUsers;
@@ -9,7 +11,7 @@ export async function getStoredUsers() {
 
 export function storeUsers(registrations) {
   return fs.writeFile(
-    "users.json",
+    "./users.json",
     JSON.stringify({ registrations: registrations || [] })
   );
 }

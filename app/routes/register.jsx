@@ -206,7 +206,7 @@ export function links() {
   return [{ rel: "stylesheet", href: styles }];
 }
 
-// export async function loader() {
-//   const users = await getStoredUsers();
-//   return users;
-// }
+export async function loader() {
+  const users = await getStoredUsers();
+  return users;
+}
