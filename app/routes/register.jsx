@@ -7,7 +7,7 @@ import { MemberDetails3 } from "../components/MemberDetails3";
 import { MemberDetails4 } from "../components/MemberDetails4";
 import styles from "~/styles/register.css";
 import { redirect } from "@remix-run/node";
-import { getStoredUsers, storeUsers } from "../data/users";
+import { getStoredUsers, storeUsers } from "../api/users";
 import { useLoaderData } from "@remix-run/react";
 
 export default function () {

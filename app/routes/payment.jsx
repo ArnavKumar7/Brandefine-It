@@ -1,7 +1,7 @@
 import { Image } from "remix-image";
 import styles from "~/styles/register.css";
 import { Form } from "@remix-run/react";
-import { getStoredUsers, storeUsers } from "../data/users";
+import { getStoredUsers, storeUsers } from "../api/users";
 import { redirect } from "@remix-run/node";
 
 export default function () {

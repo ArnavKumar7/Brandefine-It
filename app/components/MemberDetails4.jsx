@@ -1,5 +1,5 @@
 import { Form, useSubmit } from "@remix-run/react";
-import { getStoredUsers, storeUsers } from "../data/users";
+import { getStoredUsers, storeUsers } from "../api/users";
 import { redirect } from "@remix-run/node";
 
 export function MemberDetails4({ data, nextStep, handleChange, prevStep }) {
