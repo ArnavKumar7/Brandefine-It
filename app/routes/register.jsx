@@ -11,7 +11,6 @@ import { getStoredUsers, storeUsers } from "../data/users";
 import { useLoaderData } from "@remix-run/react";
 
 export default function () {
-  const users = useLoaderData();
   const [data, setData] = useState({
     id: "",
     step: 1,
@@ -89,7 +88,7 @@ export default function () {
             data={data}
             nextStep={nextStep}
             handleChange={handleChange}
-            users={users}
+            users={[]}
           />
         </div>
       );
@@ -116,7 +115,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={users}
+            users={[]}
           />
         </div>
       );
@@ -143,7 +142,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={users}
+            users={[]}
           />
         </div>
       );
@@ -170,7 +169,7 @@ export default function () {
             nextStep={nextStep}
             handleChange={handleChange}
             prevStep={prevStep}
-            users={users}
+            users={[]}
           />
         </div>
       );
@@ -207,7 +206,7 @@ export function links() {
   return [{ rel: "stylesheet", href: styles }];
 }
 
-export async function loader() {
-  const users = await getStoredUsers();
-  return users;
-}
+// export async function loader() {
+//   const users = await getStoredUsers();
+//   return users;
+// }
