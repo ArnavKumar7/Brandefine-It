@@ -63,6 +63,8 @@ export default function () {
     setData({ ...data, [input]: e.target.value });
   };
 
+  console.log(data);
+
   switch (data.step) {
     case 1:
       return (
@@ -203,10 +205,7 @@ export async function action({ request }) {
   const data = await request.formData();
   const formData = Object.fromEntries(data.entries());
   formData.id = new Date().toISOString();
-  const response = await axios.post(
-    `${process.env.BACKEND_URI}/create`,
-    formData
-  );
+  const response = await axios.post(`http://localhost:8000/create`, formData);
   if (formData.m1college.toUpperCase().includes("PES")) {
     return redirect("/pesuportal");
   } else {

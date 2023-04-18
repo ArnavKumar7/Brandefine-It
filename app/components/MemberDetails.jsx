@@ -89,7 +89,7 @@ export function MemberDetails({ data, nextStep, handleChange, users }) {
               Semester
             </label>
             <input
-              type="number"
+              type="text"
               name="m1sem"
               id="sem"
               value={data.m1sem}
