@@ -44,10 +44,16 @@ export default function () {
             priority
           />
         </div>
-
-        <button className="relative z-10 px-3 py-2 text-3xl font-semibold text-[#00b182] transition ease-in-out delay-150 bg-[#020202] hover:-translate-y-1 hover:scale-110  hover:bg-[#ffffff] duration-300 rounded-xl shadow-lg border-solid border-4 border-[#ffffff] active:bg-white focus:outline-none focus:ring focus:ring-white xs:text-base xs:px-1 xs:py-1 xs:ml-0 xs:border-2">
-          <Link to="./register">REGISTER NOW</Link>
-        </button>
+        <div className="flex flex-row justify-between mt-8 xs:flex-col">
+          <button className="relative z-10 px-3 py-2 text-3xl mr-[8rem] font-semibold text-[#00b182] transition ease-in-out delay-150 bg-[#020202] hover:-translate-y-1 hover:scale-110  hover:bg-[#ffffff] duration-300 rounded-xl shadow-lg border-solid border-4 border-[#ffffff] active:bg-white focus:outline-none focus:ring focus:ring-white xs:text-base xs:px-1 xs:py-1 xs:ml-0 xs:mr-0 xs:mb-[2rem] xs:border-2">
+            <Link to="https://forms.gle/WYYCoy61yAWaS3PCA">REGISTER NOW</Link>
+            <h6 className="text-base text-[#00b182]">For PES Students</h6>
+          </button>
+          <button className="relative z-10 px-3 py-2 text-3xl font-semibold text-[#00b182] transition ease-in-out delay-150 bg-[#020202] hover:-translate-y-1 hover:scale-110  hover:bg-[#ffffff] duration-300 rounded-xl shadow-lg border-solid border-4 border-[#ffffff] active:bg-white focus:outline-none focus:ring focus:ring-white xs:text-base xs:px-1 xs:py-1 xs:ml-0 xs:border-2">
+            <Link to="https://forms.gle/gfrZt1y5C2BKpbmz9">REGISTER NOW</Link>
+            <h6 className="text-base text-[#00b182]">For Non-PES Students</h6>
+          </button>
+        </div>
       </main>
     </>
   );
