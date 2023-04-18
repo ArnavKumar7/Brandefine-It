@@ -22,7 +22,7 @@ export default function () {
         </h1>
         <Image
           className="ml-[10rem] mr-[10rem] mb-[4rem] xs:ml-0 xs:mr-0 xs:mb-10"
-          src="/qrcollege.png"
+          src="/qrcollege.PNG"
           alt="Brandefine-It Logo"
           width={250}
           height={250}
