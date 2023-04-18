@@ -67,18 +67,24 @@ export default function () {
     case 1:
       return (
         <div className="flex justify-center items-center flex-wrap flex-col">
-          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-0 xs:mr-[20px] xs:text-sm xs:overflow-nowrap">
             Please ensure you have a point of contact who will enter the details
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!
           </h1>
 
-          <h3 className="text-2xl text-center mb-[2rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm">
+          <h3 className="text-2xl text-center mb-[2rem] xs:ml-0 xs:mr-[1rem] xs:text-sm">
             Ensure their details are filled as the first member of the team.
           </h3>
-          <h1 className=" mb-[1rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+          <h1 className=" mb-[1rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:ml-0 xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
             If you have already registered and not done payment, go to{" "}
             <Link to="/payment" className="text-blue-700">
+              here
+            </Link>
+          </h1>
+          <h1 className="mb-[1rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:ml-0 xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+            For PES students, if not done payment, go to{" "}
+            <Link to="/pesuportal" className="text-blue-700">
               here
             </Link>
           </h1>
@@ -100,7 +106,7 @@ export default function () {
     case 2:
       return (
         <div className="flex justify-center items-center flex-wrap flex-col">
-          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-0 xs:mr-[20px] xs:text-sm xs:overflow-nowrap">
             Please ensure you have a point of contact who will enter the details
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!
@@ -127,7 +133,7 @@ export default function () {
     case 3:
       return (
         <div className="flex justify-center items-center flex-wrap flex-col">
-          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-0 xs:mr-[20px] xs:text-sm xs:overflow-nowrap">
             Please ensure you have a point of contact who will enter the details
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!
@@ -154,7 +160,7 @@ export default function () {
     case 4:
       return (
         <div className="flex justify-center items-center flex-wrap flex-col">
-          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-sm xs:overflow-nowrap">
+          <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:mt-[5rem] xs:ml-0 xs:mr-[20px] xs:text-sm xs:overflow-nowrap">
             Please ensure you have a point of contact who will enter the details
             for the entire Team and will be Member-1. They will have to relay
             all communication received regarding Brandefine it!

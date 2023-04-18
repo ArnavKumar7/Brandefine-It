@@ -29,10 +29,7 @@ export function MemberDetails({ data, nextStep, handleChange, users }) {
   };
 
   return (
-    <div
-      className="ml-[34px] mr-[68px]  bg-black  my-6 border border-solid border-[#000000] rounded-md mb-auto"
-      style={{ width: "50%" }}
-    >
+    <div className="ml-[34px] mr-[68px] w-1/2 bg-black  my-6 border border-solid border-[#000000] rounded-md mb-auto xs:w-4/5">
       <Form>
         <div className="grid gap-x-24 grid-cols-2 mt-5 xs:grid-cols-1">
           <div className="grid gap-y-7 auto-rows-min">
@@ -92,7 +89,7 @@ export function MemberDetails({ data, nextStep, handleChange, users }) {
               Semester
             </label>
             <input
-              type="text"
+              type="number"
               name="m1sem"
               id="sem"
               value={data.m1sem}
