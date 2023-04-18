@@ -4,7 +4,7 @@ import { Link } from "@remix-run/react";
 export default function () {
   return (
     <div className="m-auto">
-      <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center">
+      <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-white text-2xl text-center">
         Please follow the below link in a new tab
         <br />
         <a

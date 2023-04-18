@@ -8,15 +8,15 @@ import axios from "axios";
 export default function () {
   return (
     <div className="flex justify-center items-center flex-wrap flex-col p-10 m-10 xs:p-0 xs:m-0">
-      <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-2xl text-center xs:ml-[1rem] xs:mr-[1rem] xs:text-xl">
+      <h1 className="mt-[5rem] mb-[2rem] mr-[10rem] ml-[10rem] text-white text-2xl text-center xs:ml-[1rem] xs:mr-[1rem] xs:text-xl">
         Please ensure you have a point of contact, who will make the payment for
         the entire Team, and will relay all communication received regarding
         Brandefine it!
       </h1>
-      <h3 className="text-2xl text-center mb-[5rem] xs:ml-[1rem] xs:mr-[1rem] xs:text-xl">
+      <h3 className="text-2xl text-center mb-[5rem] text-white xs:ml-[1rem] xs:mr-[1rem] xs:text-xl">
         Ensure their details are filled as the first member of the team.
       </h3>
-      <div className="flex flex-row items-center text-3xl mb-8 xs:flex-col">
+      <div className="flex flex-row items-center text-white text-3xl mb-8 xs:flex-col">
         <h1 className="mr-[5rem] text-[#FEC200] xs:mr-0 xs:mb-10">
           3 MEMBERS <br /> INR 480
         </h1>
